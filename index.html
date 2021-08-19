@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<html>
+ <body> 
+<center>
+ <input type="number" id="bpm" value="140" min="0" max="280" style="display: block;margin: auto;text-align: center;width:29px;height:19px;touch-action: manipulation;font-size:15px;"> 
+</center>
+<center> 
+<button class="tool">step/free</button><button class="tool">keyboard</button><button class="tool">double</button><button class="tool">stop</button>
+</center>
+<center> 
+<button>𝅝</button><button>𝅗𝅥</button><button>𝅘𝅥</button><button>𝅘𝅥𝅮</button><button>𝅘𝅥𝅯</button><button>𝅘𝅥𝅰</button><button>𝅘𝅥𝅱</button><button>𝅘𝅥𝅲</button>
+</center>
+
+
+
+<canvas id="myCanvas" style="background:lightblue"></canvas>
+
+<center>   
+
+<input type="file"><input type="file"><input type="file"><input type="file">
+  </center>
+  
+ <style>
+ * {
+      touch-action: manipulation;
+  }                  
+                     * { margin: 0; padding: 0;}
+
+body, html { width:100%;    touch-action: manipulation; }
+   
+#myCanvas{
+   touch-action: manipulation;
+}
+  
+#tool {
+ 
+   z-index: 10;
+    position:relative;
+    margin-left: -1px;
+  top: -1px
+    
+}
+  
+  
+button {
+   z-index: 10;
+     position:relative;
+    width: 33px; 
+    height: 33px;
+    margin-left: -1px;
+    top: -2px;
+    
+}
+   
+input[type=file] { 
+    position:relative;
+    top:358px;
+    width: 82px; 
+    margin-left: -1px;
+    
+  }
+  
+</style>
+
+<script>
+var counter = 0;
+ var feel = ["red","red","red","red","red","red","red","red","red","red","red"];
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+c.width = window.innerWidth;
+c.height = window.innerWidth;
+c.style.position = "absolute";
+c.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  setInterval(function(){ 
+                                                               
+counter=0; 
+                                       
+                                                               
+ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
+
+ctx.beginPath();
+ctx.rect(1-counter/2, 1-counter/2, (window.innerWidth)-1+counter, (window.innerWidth)-1+counter);
+ctx.fillStyle = feel[0];
+ctx.fill();
+ctx.stroke();
+                                                               
+
+ctx.beginPath();
+ctx.rect(1+window.innerWidth/6-counter/2,1+window.innerWidth/6-counter/2,window.innerWidth-window.innerWidth/3+counter,window.innerWidth-window.innerWidth/3+counter);
+ctx.fillStyle = feel[1];
+ctx.fill();
+ctx.stroke();
+
+                                                                
+ctx.beginPath();                                                                
+ctx.rect(1+window.innerWidth/3-counter/2,1+window.innerWidth/3-counter/2,window.innerWidth-window.innerWidth/1.5+counter,window.innerWidth-window.innerWidth/1.5+counter);
+ctx.fillStyle = feel[2];
+ctx.fill();
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.rect(window.innerWidth/2-counter/2, window.innerWidth/2-counter/2, counter, counter);
+ctx.fillStyle = feel[3];
+ctx.fill();
+ctx.stroke();
+ 
+ 
+ 
+ 
+ }, (60000/140)/(window.innerWidth/2)  );
+ 
+ 
+ 
+ var x = document.getElementsByClassName("tool");
+var i;
+for (i = 0; i < x.length; i++) {
+  x[i].style.width = window.innerWidth/8;
+   x[i].style.height = window.innerWidth/8;
+}
+ 
+ 
+</script>
+</body>
+</html>
