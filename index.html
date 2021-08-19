@@ -9,7 +9,7 @@
 <button class="tool">step/free</button><button class="tool">keyboard</button><button class="tool">double</button><button class="tool">stop</button>
 </center>
 <center> 
-<button>𝅝</button><button>𝅗𝅥</button><button>𝅘𝅥</button><button>𝅘𝅥𝅮</button><button>𝅘𝅥𝅯</button><button>𝅘𝅥𝅰</button><button>𝅘𝅥𝅱</button><button>𝅘𝅥𝅲</button>
+<button class="tol">𝅝</button><button class="tol">𝅗𝅥</button><button class="tol">𝅘𝅥</button><button class="tol">𝅘𝅥𝅮</button><button class="tol">𝅘𝅥𝅯</button><button class="tol">𝅘𝅥𝅰</button><button class="tol">𝅘𝅥𝅱</button><button class="tol">𝅘𝅥𝅲</button>
 </center>
 
 
@@ -126,8 +126,14 @@ ctx.stroke();
  var x = document.getElementsByClassName("tool");
 var i;
 for (i = 0; i < x.length; i++) {
-  x[i].style.width = window.innerWidth/8 + "px";
-   x[i].style.height = window.innerWidth/8  + "px";
+  x[i].style.width = window.innerWidth/4 + "px";
+   x[i].style.height = window.innerWidth/4  + "px";
+}
+  var y = document.getElementsByClassName("tol");
+var i;
+for (i = 0; i < x.length; i++) {
+  y[i].style.width = window.innerWidth/8 + "px";
+   y[i].style.height = window.innerWidth/8  + "px";
 }
  
  
