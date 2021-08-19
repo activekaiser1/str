@@ -2,12 +2,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <html>
  <body> 
-
-<center> 
-<button class="tool">step/free</button><button class="tool">keyboard</button><button class="tool">double</button><button class="tool">stop</button>
+<center>
+ <input type="number" id="bpm" value="140" min="0" max="280" style="display: block;margin: auto;text-align: center;width:29px;height:19px;touch-action: manipulation;font-size:15px;"> 
 </center>
 <center> 
-<button class="tol">𝅝</button><button class="tol">𝅗𝅥</button><button class="tol">𝅘𝅥</button><button class="tol">𝅘𝅥𝅮</button><button class="tol">𝅘𝅥𝅯</button><button class="tol">𝅘𝅥𝅰</button><button class="tol">𝅘𝅥𝅱</button><button class="tol">𝅘𝅥𝅲</button>
+<button id="tool">step/free</button><button id="tool">keyboard</button><button id="tool">double</button><button id="tool">stop</button>
+</center>
+<center> 
+<button>𝅝</button><button>𝅗𝅥</button><button>𝅘𝅥</button><button>𝅘𝅥𝅮</button><button>𝅘𝅥𝅯</button><button>𝅘𝅥𝅰</button><button>𝅘𝅥𝅱</button><button>𝅘𝅥𝅲</button>
 </center>
 
 
@@ -35,6 +37,8 @@ body, html { width:100%;    touch-action: manipulation; }
  
    z-index: 10;
     position:relative;
+    width: 65px; 
+    height: 65px;
     margin-left: -1px;
   top: -1px
     
@@ -121,18 +125,7 @@ ctx.stroke();
  
  
  
- var x = document.getElementsByClassName("tool");
-var i;
-for (i = 0; i < x.length; i++) {
-  x[i].style.width = window.innerWidth/4 + "px";
-   x[i].style.height = window.innerWidth/4  + "px";
-}
-  var y = document.getElementsByClassName("tol");
-var i;
-for (i = 0; i < x.length; i++) {
-  y[i].style.width = window.innerWidth/8 + "px";
-   y[i].style.height = window.innerWidth/8  + "px";
-}
+ 
  
  
 </script>
