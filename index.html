@@ -107,21 +107,21 @@ counter=0;
 ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
 
 ctx.beginPath();
-ctx.rect(counter/2, counter/2, (window.innerWidth)-1+counter, (window.innerWidth)-1+counter);
+ctx.rect(counter/2, counter/2, (window.innerWidth)+counter, (window.innerWidth)+counter);
 ctx.fillStyle = feel[0];
 ctx.fill();
 ctx.stroke();
                                                                
 
 ctx.beginPath();
-ctx.rect(1+window.innerWidth/6-counter/2,1+window.innerWidth/6-counter/2,window.innerWidth-window.innerWidth/3+counter,window.innerWidth-window.innerWidth/3+counter);
+ctx.rect(window.innerWidth/6-counter/2,window.innerWidth/6-counter/2,window.innerWidth-window.innerWidth/3+counter,window.innerWidth-window.innerWidth/3+counter);
 ctx.fillStyle = feel[1];
 ctx.fill();
 ctx.stroke();
 
                                                                 
 ctx.beginPath();                                                                
-ctx.rect(1+window.innerWidth/3-counter/2,1+window.innerWidth/3-counter/2,window.innerWidth-window.innerWidth/1.5+counter,window.innerWidth-window.innerWidth/1.5+counter);
+ctx.rect(window.innerWidth/3-counter/2,window.innerWidth/3-counter/2,window.innerWidth-window.innerWidth/1.5+counter,window.innerWidth-window.innerWidth/1.5+counter);
 ctx.fillStyle = feel[2];
 ctx.fill();
 ctx.stroke();
