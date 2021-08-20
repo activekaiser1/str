@@ -107,7 +107,7 @@ counter=0;
 ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
 
 ctx.beginPath();
-ctx.rect(1-counter/2, 1-counter/2, (window.innerWidth)-1+counter, (window.innerWidth)-1+counter);
+ctx.rect(counter/2, counter/2, (window.innerWidth)-1+counter, (window.innerWidth)-1+counter);
 ctx.fillStyle = feel[0];
 ctx.fill();
 ctx.stroke();
