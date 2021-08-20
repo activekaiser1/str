@@ -22,7 +22,7 @@
 
   
   
-  <div style="position:absolute;width: 720px;height: 119px;overflow-x: auto;left:0px;top:479px;touch-action: manipulation;">
+  <div id="channel" onmousemove="loc(event) style="position:absolute;width: 720px;height: 119px;overflow-x: auto;left:0px;top:479px;touch-action: manipulation;">
 
 <button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button>
 
@@ -80,7 +80,6 @@ button {
     touch-action: manipulation;
     position:relative;
     top:24px;
-    left:-20px;
     width: 87px;
     height: 91px;
     margin-left: -1px;
@@ -150,7 +149,11 @@ ctx.stroke();
  
  
  
- alert(window.innerWidth);
+  function loc(event) {
+  var x = event.pageX;
+ 
+  document.getElementById("channel").style.left = x;
+}         
  
 </script>
 </body>
