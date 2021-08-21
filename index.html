@@ -92,6 +92,7 @@ button {
 
 <script>
 var counter = 0;
+ var addy = 0;
  var feel = ["red","red","red","red","red","red","red","red","red","red","red"];
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
@@ -153,8 +154,9 @@ ctx.stroke();
  
  function shows(event) {
   var x = event.touches[0].pageX;
-
-  document.getElementById("channel").style.left = x++ + "px";
+  addy = x++;
+  
+  document.getElementById("channel").style.left = addy + "px";
 }     
  
 </script>
