@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <html>
 <body>
 <center>
@@ -22,11 +22,12 @@
 
   
   
-  <div id="channel" style="position:absolute;left:0px;width: 1440px;height: 118px;top:479px;" ontouchmove="shows(event)">
+  <div id="channel" style="position:absolute;width: 1440px;height: 118px;top:479px;touch-action: manipulation;" ontouchmove="shows(event)">
 
 <button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button>
 
-<p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p><p id="pp"></p>
+<input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text"><input readonly id="pp" type="text">
+
 
   </div>
    
@@ -43,7 +44,7 @@
 body, html { width:100%; overflow:hidden;  }
    
 #myCanvas{
-
+   touch-action: manipulation;
 }
   
 #tool {
@@ -153,7 +154,7 @@ ctx.stroke();
  function shows(event) {
   var x = event.touches[0].pageX;
 
-  document.getElementById("channel").style.left = -x + "px";
+  document.getElementById("channel").style.left = x + "px";
 }     
  
 </script>
