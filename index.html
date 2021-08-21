@@ -22,7 +22,7 @@
 
   
   
-  <div id="channel" style="position:absolute;left:0px;width: 1440px;height: 118px;top:479px;" onmousemove="shows(event)">
+  <div id="channel" style="position:absolute;left:0px;width: 1440px;height: 118px;top:479px;" ontouchmove="shows(event)">
 
 <button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button>
 
@@ -151,7 +151,7 @@ ctx.stroke();
  
  
  function shows(event) {
-  var x = event.pageX;
+  var x = event.touches[0].pageX;
 
   document.getElementById("channel").style.left = -x + "px";
 }     
