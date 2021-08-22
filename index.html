@@ -164,8 +164,11 @@ ctx.stroke();
   x = event.touches[0].clientX;
   ttl = (x-xprev);
   
-  if((ttl+isol)>0){document.getElementById("channel").style.left="0px";} else {
+  if((ttl+isol)>0){document.getElementById("channel").style.left="0px";} 
+  if((ttl+isol)>1392){document.getElementById("channel").style.left="1392px";};
+  else {
   document.getElementById("channel").style.left = (ttl+isol) + "px";};
+  
   
   
 }     
