@@ -165,9 +165,8 @@ ctx.stroke();
   ttl = (x-xprev);
   
   if((ttl+isol)>0){document.getElementById("channel").style.left="0px";} 
-  if((ttl+isol)>1392){document.getElementById("channel").style.left="1392px";};
-  else {
-  document.getElementById("channel").style.left = (ttl+isol) + "px";};
+  else if((ttl+isol)>1392){document.getElementById("channel").style.left="1392px";};
+  else { document.getElementById("channel").style.left = (ttl+isol) + "px";};
   
   
   
