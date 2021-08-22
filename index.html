@@ -162,7 +162,7 @@ ctx.stroke();
  
  function shows(event) {
   x = event.touches[0].clientX;
-  ttl = x-xprev
+  ttl += (x-xprev);
   document.getElementById("channel").style.left = ttl + "px";
 }     
  
