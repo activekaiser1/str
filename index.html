@@ -91,6 +91,7 @@ button {
 </style>
 
 <script>
+ var isol = 0;
  var ttl = 0;
  var xprev = 0;
  var x = 0;
@@ -155,14 +156,14 @@ ctx.stroke();
  
   function sho(event) {
   xprev = event.touches[0].clientX;
-  
+  isol = ttl++;
 }     
  
  
  function show(event) {
   x = event.touches[0].clientX;
   ttl = (x-xprev);
-  document.getElementById("channel").style.left = ttl + "px";
+  document.getElementById("channel").style.left = ttl+isol + "px";
 }     
  
   function shows(event) {
