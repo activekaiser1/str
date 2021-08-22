@@ -22,7 +22,7 @@
 
   
   
-  <div id="channel" style="position:absolute;width: 1440px;height: 118px;top:479px;touch-action: manipulation;" ontouchmove="shows(event)">
+  <div id="channel" style="position:absolute;width: 1440px;height: 118px;top:479px;touch-action: manipulation;" ontouchstart="show(event)" ontouchmove="shows(event)">
 
 <button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button><button id="tol">Choose File</button>
 
@@ -91,6 +91,9 @@ button {
 </style>
 
 <script>
+ var ttl = 0;
+ var xprev = 0;
+ var x = 0;
 var counter = 0;
  var feel = ["red","red","red","red","red","red","red","red","red","red","red"];
   var c = document.getElementById("myCanvas");
@@ -150,11 +153,17 @@ ctx.stroke();
  
  
  
- 
- function shows(event) {
-  var x = event.touches[0].clientX;
+  function show(event) {
+  xprev = event.touches[0].clientX;
   
   document.getElementById("channel").style.left = x + "px";
+}     
+ 
+ 
+ function shows(event) {
+  x = event.touches[0].clientX;
+  ttl = x-xprev
+  document.getElementById("channel").style.left = ttl + "px";
 }     
  
 </script>
